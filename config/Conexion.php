@@ -1,6 +1,6 @@
 <?php 
 require_once "global.php";
-require_once "con.php";
+require_once "cone.php";
 if (!function_exists('ejecutarConsultaSP')) {
 	function ejecutarConsultaSP($sql){ 
 			$Fn = new Cls_DataConnection();
