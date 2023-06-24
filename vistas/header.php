@@ -45,7 +45,7 @@ if (strlen(session_id())<1)
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span><font size="4" style="color:#FFF">PORTAFOLIO DOCENTE - INSTITUTO SUPERIOR TECNOLOGICO "17 DE JULIO"</font></span>
+        <span><font size="4" style="color:#FFF">BIOTECNOLOGIA - INSTITUTO SUPERIOR TECNOLOGICO "17 DE JULIO"</font></span>
         
       </a>
       
@@ -101,20 +101,22 @@ if (strlen(session_id())<1)
 if ($_SESSION['Actas']==0) {
   echo ' <li class="treeview">
           <a href="#">
-            <i class="fa fa-folder"></i> <span>Donaciones</span>
+            <i class="fa fa-folder"></i> <span>Registro</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="donadores.php"><i class="fa fa-circle-o"></i> Registrar Donadores</a></li>  <li><a href="donaciones.php"><i class="fa fa-circle-o"></i> Registrar Donaciones</a></li>        
+            <li><a href="clientes.php"><i class="fa fa-circle-o"></i>Clientes</a></li>  <li><a href="donaciones.php"><i class="fa fa-circle-o"></i>Donaciones</a></li>   
+			<li><a href="usos.php"><i class="fa fa-circle-o"></i> Usos</a></li>
+
                  
           </ul>
         </li>';
 }
         ?>
                <?php 
-if ($_SESSION['Activos']==0) {
+if ($_SESSION['Activos']==1) {
   echo ' <li class="treeview">
           <a href="#">
             <i class="fa fa-th"></i> <span>Opciones de Docente</span>
@@ -136,13 +138,16 @@ if ($_SESSION['Activos']==0) {
 if ($_SESSION['Generación']==0) {
   echo '<li class="treeview">
           <a href="#">
-            <i class="fa fa-folder"></i> <span>Catalogo</span>
+            <i class="fa fa-folder"></i> <span>Reportes</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="catalogo.php"><i class="fa fa-circle-o"></i> Catalogo</a></li>
+            <li><a href="stock.php"><i class="fa fa-circle-o"></i> Stock</a></li>
+			<li><a href="donacionescad.php"><i class="fa fa-circle-o"></i> Donaciones Caducadas</a></li>
+			<li><a href="stock_two.php"><i class="fa fa-circle-o"></i> Usos</a></li>
+			
             
           </ul>
         </li>';
@@ -167,7 +172,7 @@ if ($_SESSION['Acceso']==0) {
 }
         ?>  
                                      <?php 
-if ($_SESSION['Reportes']==0) {
+if ($_SESSION['Reportes']==1) {
   echo '     <li class="treeview">
           <a href="#">
             <i class="fa fa-bar-chart"></i> <span>Reportes</span>
@@ -176,15 +181,15 @@ if ($_SESSION['Reportes']==0) {
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="reactasist.php"><i class="fa fa-circle-o"></i>Reimpreción Actas Ist</a></li>
-            <li><a href="porubicacion.php"><i class="fa fa-circle-o"></i>Activos por Ubicación</a></li>
+             <li><a href="reportesbio.php"><i class="fa fa-circle-o"></i>Reportes de Inventario</a></li>
+            
           </ul>
         </li>';
 }
         ?>  
               
                                                 <?php 
-if ($_SESSION['Custodios']==0) {
+if ($_SESSION['Custodios']==1) {
   echo '<li class="treeview">
           <a href="#">
             <i class="fa fa-bar-chart"></i> <span>Usos</span>
@@ -193,7 +198,7 @@ if ($_SESSION['Custodios']==0) {
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="usos.php"><i class="fa fa-circle-o"></i> Registro de Usos</a></li>
+            <li><a href="usos.php"><i class="fa fa-circle-o"></i> Registro de usos</a></li>
          
      
 

@@ -1,23 +1,18 @@
 <?php 
 session_start();
-require_once "../modelos/donadores.php";
+require_once "../modelos/clientes.php";
 
-$donadores=new donadores();
+$clientes=new clientes();
 
 $claveu=isset($_POST["claveu"])? limpiarCadena($_POST["claveu"]):"";
-$det_id=isset($_POST["det_id"])? limpiarCadena($_POST["det_id"]):"";
-$don_cedula=isset($_POST["don_cedula"])? limpiarCadena($_POST["don_cedula"]):"";
-$don_nombre=isset($_POST["don_nombre"])? limpiarCadena($_POST["don_nombre"]):"";
-$don_telefono=isset($_POST["don_telefono"])? limpiarCadena($_POST["don_telefono"]):"";
-$don_correo=isset($_POST["don_correo"])? limpiarCadena($_POST["don_correo"]):"";
-$don_direccion=isset($_POST["don_direccion"])? limpiarCadena($_POST["don_direccion"]):"";
-$don_fecha=isset($_POST["don_fecha"])? limpiarCadena($_POST["don_fecha"]):"";
-$cat_id=isset($_POST["cat_id"])? limpiarCadena($_POST["cat_id"]):"";
-$cat_nombre=isset($_POST["cat_nombre"])? limpiarCadena($_POST["cat_nombre"]):"";
-$cat_descripcion=isset($_POST["cat_descripcion"])? limpiarCadena($_POST["cat_descripcion"]):"";
-$cat_id_estado=isset($_POST["cat_id_estado"])? limpiarCadena($_POST["cat_id_estado"]):"";
-$det_cantidad=isset($_POST["det_cantidad"])? limpiarCadena($_POST["det_cantidad"]):"";
-$det_fechacad=isset($_POST["det_fechacad"])? limpiarCadena($_POST["det_fechacad"]):"";
+
+$cli_cedula=isset($_POST["cli_cedula"])? limpiarCadena($_POST["cli_cedula"]):"";
+$cli_nombre=isset($_POST["cli_nombre"])? limpiarCadena($_POST["cli_nombre"]):"";
+$cli_telefono=isset($_POST["cli_telefono"])? limpiarCadena($_POST["cli_telefono"]):"";
+$cli_correo=isset($_POST["cli_correo"])? limpiarCadena($_POST["cli_correo"]):"";
+$cli_direccion=isset($_POST["cli_direccion"])? limpiarCadena($_POST["cli_direccion"]):"";
+$cli_fecha=isset($_POST["cli_fecha"])? limpiarCadena($_POST["cli_fecha"]):"";
+
 
 switch ($_GET["op"]) {
 case 'salir':
@@ -31,9 +26,9 @@ case 'salir':
 	break;
 		
 	case 'guardaryeditar':
-		$rspta=$donadores->donador_d();
+		//$rspta=$clientes->donador_d();
 	
-		$rspta=$donadores->insertar_donadores($don_cedula,$don_nombre,$don_telefono,$don_correo,$don_direccion);
+		$rspta=$clientes->insertar_clientes($cli_cedula,$cli_nombre,$cli_telefono,$cli_correo,$cli_direccion);
 										
 		echo $rspta ? "Datos registrados correctamente" : "No se pudo registrar los datos";
 		
@@ -47,17 +42,17 @@ case 'salir':
 		break;
 		
 		case 'listar':
-	    $rspta=$donadores->listar();
+	    $rspta=$clientes->listar();
 		$data=Array();
 
 		while ($reg=$rspta->fetch_object()) {
 			$data[]=array(
-            "0"=>$reg->don_cedula,
-            "1"=>$reg->don_nombre,
-            "2"=>$reg->don_telefono,
-            "3"=>$reg->don_correo,
-            "4"=>$reg->don_direccion,
-			"5"=>$reg->don_fecha,
+            "0"=>$reg->cli_cedula,
+            "1"=>$reg->cli_nombre,
+            "2"=>$reg->cli_telefono,
+            "3"=>$reg->cli_correo,
+            "4"=>$reg->cli_direccion,
+			"5"=>$reg->cli_fecha,
               );
 		}
 		$results=array(

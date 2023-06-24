@@ -1,7 +1,7 @@
 <?php 
 //incluir la conexion de base de datos
 require "../config/Conexion.php";
-class donadores{
+class clientes{
 
 
 	//implementamos nuestro constructor
@@ -13,6 +13,12 @@ public function listarp($usu_id){
 	$sql="call sp_listar_permisos($usu_id)";
 	return ejecutarConsultaSP($sql);
 }
+	
+	public function donador_d(){
+	$sql="call sp_donaciones_select()";
+	return ejecutarConsultaSP($sql);
+}
+	
 
 public function insertar($usu_nombre,$usu_cedula,$usu_telefono,$usu_correo,$usu_cargo,$usu_login,$usu_clave){
 	$sql="INSERT INTO usuario(usu_nombre,usu_cedula,usu_telefono,usu_correo,usu_cargo,usu_login,usu_clave) VALUES ('$usu_nombre','$usu_cedula','$usu_telefono','$usu_correo','$usu_cargo','$usu_login','$usu_clave');";
@@ -42,16 +48,22 @@ public function combo_donadores(){
 	$sql="CALL sp_donadores_combo();";
 	return ejecutarConsultaSP($sql);
 }
-public function insertar_donadores($don_cedula,$don_nombre,$don_telefono,$don_correo,$don_direccion,
-								   $don_fecha){
+public function insertar_donadores($don_cedula,$don_nombre,$don_telefono,$don_correo,$don_direccion
+								   ){
 	$sql="CALL sp_donaciones_insert('$don_cedula','$don_nombre','$don_telefono','$don_correo',
-	'$don_direccion','$don_fecha');";
+	'$don_direccion');";
 	return ejecutarConsultaSP($sql);
 }
 
 public function insertar_detalle($don_cedula,$cat_id,$cat_id_estado,$det_cantidad,$det_fechacad){
 $sql="CALL sp_detalle_insert('$don_cedula','$cat_id','$cat_id_estado','$det_cantidad','$det_fechacad');";
 	return ejecutarConsultaSP($sql);
+}
+	
+	
+public function verificar($don_cedula){
+	$sql="Select * from donaciones where don_cedula='$don_cedula'";
+	return ejecutarConsulta($sql);
 }
 
 

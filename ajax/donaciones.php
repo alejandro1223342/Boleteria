@@ -37,19 +37,13 @@ case 'salir':
 	if (empty($idpersona)) {
 		//$rspta=$donadores->insertar_donadores($don_cedula,$don_nombre,$don_telefono,$don_correo,$don_direccion,$don_fecha);
 											 
-		$rspta=$donadores->insertar_detalle($_POST["donadores"],$_POST["materialesdon"],$_POST["estado"],$det_cantidad,$det_fechacad,$det_fechadon);
+		$rspta=$donadores->insertar_detalle($_POST["donadores"],$_POST["materialesdon"],$_POST["estado"],$det_cantidad,$det_fechacad);
 		
-			
-
 		echo $rspta ? "Datos registrados correctamente" : "No se pudo registrar los datos";
-	}
-		/*
 		
-	}/*else{
-         $rspta=$persona->editar($idpersona,$tipo_persona,$nombre,$tipo_documento,$num_documento,$direccion,$telefono,$email);
-		echo $rspta ? "Datos actualizados correctamente" : "No se pudo actualizar los datos";
+		
 	}
-		*/
+		
 		break;
 		
 		case 'listar':
@@ -58,14 +52,13 @@ case 'salir':
 
 		while ($reg=$rspta->fetch_object()) {
 			$data[]=array(
-		    "0"=>$reg->det_id,
-            "1"=>$reg->don_nombre,
-            "2"=>$reg->cat_nombre,
-		    "3"=>$reg->cat_descripcion,
-			"4"=>$reg->cat_id_estado,
-			"5"=>$reg->det_cantidad,
-			"6"=>$reg->det_fechacad,
-			"7"=>$reg->det_fechadon
+            "0"=>$reg->don_nombre,
+            "1"=>$reg->cat_nombre,
+		    "2"=>$reg->cat_descripcion,
+			"3"=>$reg->estado,
+			"4"=>$reg->det_cantidad,
+			"5"=>$reg->det_fechacad,
+			"6"=>$reg->det_fechadon
               );
 		}
 		$results=array(
@@ -91,20 +84,26 @@ case 'salir':
 				echo '<option value='.$reg->cat_id.'>'.$reg->cat_nombre.'</option>';
 			}
 			break;	
-		
-	case 'combo_materiales':
-		
-			$rspta = $donadores->obten_materiales();
-		echo'<option value="-1">Seleccione el Articulo </option>';
+	case 'combo_materiales':	
+			$rspta = $donadores->obten_categoria();
+		echo'<option value="">Seleccione el bien  o consumible </option>';
 			while ($reg = $rspta->fetch_object()) {
-				echo '<option value='.$reg->cat_id.'>'.$reg->cat_nombre.'-'.$reg->cat_descripcion.'</option>'
+				echo '<option value='.$reg->cat_id.'>'.$reg->cat_nombre.' '.$reg->cat_descripcion.'</option>'
 					;
 			}
-		
 			break;
+		
+		case 'mateconsu':	
+			$rspta = $donadores->mateconsu($_GET["id"]);
+		
+			while ($reg = $rspta->fetch_object()) {
+				echo $reg->cat_padre;
+			}
+		    break;
+		
 	case 'combo_estado':	
 			$rspta = $donadores->obten_combo(13);
-		echo'<option value="-1">Seleccione el Estado </option>';
+		
 			while ($reg = $rspta->fetch_object()) {
 				echo '<option value='.$reg->cat_id.'>'.$reg->cat_nombre.'</option>'
 					;
@@ -113,7 +112,7 @@ case 'salir':
 		
 		case 'combo_donadores':	
 			$rspta = $donadores->combo_donadores();
-		echo'<option value="-1">Seleccione el Donador </option>';
+		echo'<option value="">Seleccione el donador </option>';
 			while ($reg = $rspta->fetch_object()) {
 				echo '<option value='.$reg->don_cedula.'>'.$reg->don_nombre.'</option>'
 					;

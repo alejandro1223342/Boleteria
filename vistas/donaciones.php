@@ -32,12 +32,12 @@ if ($_SESSION['Actas']==0) {
      
      <div class="form-group col-lg-6 col-md-6 col-xs-12">
       <label for="">Donador(*):</label>
-           <select id="donadores" name="donadores" class="form-control selectpicker"></select>
+           <select id="donadores" name="donadores" class="form-control selectpicker" data-live-search="true" required></select>
 		</div>
 	  
 	  <div class="form-group col-lg-6 col-md-6 col-xs-12">
       <label for="">Articulo(*):</label>
-           <select id="materialesdon" name="materialesdon" class="form-control selectpicker"></select>
+           <select id="materialesdon" onchange="ShowSelected();" name="materialesdon" data-live-search="true" required class="form-control selectpicker"></select>
 		</div>
 		
     <div class="form-group col-lg-4 col-md-6 col-xs-12">
@@ -46,28 +46,24 @@ if ($_SESSION['Actas']==0) {
 		</div>
 	  
 	 <div class="form-group col-lg-6 col-md-6 col-xs-12">
-      <label for="">Cantidad(*)</label>
-      <input class="form-control" type="text" name="det_cantidad" id="det_cantidad" maxlength="20" placeholder="Cantidad" required>
+      <label for="" id="cantidadtxt">Cantidad</label>
+      <input class="form-control" type="text" name="det_cantidad" id="det_cantidad" maxlength="1000" required placeholder="Cantidad">
     </div>
 	  
 	     <div class="form-group col-lg-6 col-md-6 col-xs-12">
-      <label for="">Caducidad(*):</label>
+      <label for="" >Caducidad(*):</label>
       <input class="form-control" type="date" name="det_fechacad" id="det_fechacad" maxlength="20" placeholder="Fecha de caducidad" required>
     </div>
-	  <div class="form-group col-lg-6 col-md-6 col-xs-12">
-      <label for="">Fecha de Donación(*):</label>
-      <input class="form-control" type="date" name="det_fechadon" id="det_fechadon" maxlength="20" placeholder="Fecha de donación" required>
-    </div>
+	
     <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i>  Guardar</button>
-      <button class="btn btn-danger" onclick="cancelarform()" type="button"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
+      <button class="btn btn-danger" onclick="limpiar()" type="button"><i class="fa fa-arrow-circle-left"></i> Cancelar</button>
     </div>
   </form>
 </div>
 		  <div style="width:900" id="listadoregistros">
   <table id="tbllistado"  class="table table-striped table-bordered table-condensed table-hover"> 
     <thead>
-	  <th>ID</th>
       <th>Donador</th>
       <th>Articulo</th>
 	  <th>Descripcion</th>

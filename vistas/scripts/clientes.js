@@ -22,20 +22,16 @@ function init(){
    	$("#subcategoria").selectpicker('refresh');
      });
 	
-	$.post("../ajax/donaciones.php?op=combo_materiales", function(r){
-   	$("#materialesdon").html(r);
-   	$("#materialesdon").selectpicker('refresh');
+	$.post("../ajax/donadores.php?op=combo_materiales", function(r){
+   	$("#materiales").html(r);
+   	$("#materiales").selectpicker('refresh');
      });
 	
-	$.post("../ajax/donaciones.php?op=combo_estado", function(r){
+	$.post("../ajax/donadores.php?op=combo_estado", function(r){
    	$("#estado").html(r);
    	$("#estado").selectpicker('refresh');
      });
 	
-	$.post("../ajax/donaciones.php?op=combo_donadores", function(r){
-   	$("#donadores").html(r);
-   	$("#donadores").selectpicker('refresh');
-     });
 }
 
 //funcion limpiar
@@ -66,28 +62,6 @@ function mostrarform(flag){
 	}
 }
 
-function ShowSelected() { 
-     $.ajax({
-     	url: "../ajax/donaciones.php?op=mateconsu&id="+$("#materialesdon").val(),
-     	type: "get",
-		 
-     
-     	contentType: false,
-     	processData: false,
-		
-     	success: function(datos){
-			
-     				if ((datos==6 || datos==8|| datos==9 || datos==11 || datos==10 || datos==12))
-			      $("#cantidadtxt").text("Cantidad(*): unidades");
-			else
-				  $("#cantidadtxt").text("Cantidad(*): gr/ml");
-		
-     	}
-
-     });
-
-	             //averiguar si es material o consumible	
-                } 
 //cancelar form
 function cancelarform(){
 	limpiar();
@@ -102,7 +76,7 @@ function listar(){
 		
 		"ajax":
 		{
-			url:'../ajax/donaciones.php?op=listar',
+			url:'../ajax/clientes.php?op=listar',
 			type: "get",
 			dataType : "json",
 			error:function(e){
@@ -121,15 +95,18 @@ function guardaryeditar(e){
      var formData=new FormData($("#formulario")[0]);
 
      $.ajax({
-     	url: "../ajax/donaciones.php?op=guardaryeditar",
+     	url: "../ajax/clientes.php?op=guardaryeditar",
      	type: "POST",
      	data: formData,
      	contentType: false,
      	processData: false,
 
      	success: function(datos){
-     		bootbox.alert(datos);
-     		
+     		if (datos=="Datos registrados correctamente")
+			    bootbox.alert(datos);
+			else
+				bootbox.alert("El cliente ya existe");
+//     		mostrarform(false);
      		tabla.ajax.reload();
      	}
      });

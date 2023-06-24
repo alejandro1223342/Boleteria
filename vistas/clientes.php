@@ -31,24 +31,24 @@ if ($_SESSION['Actas']==0) {
     <div class="form-group col-lg-6 col-md-12 col-xs-12">
       <label for="">Cédula(*):</label>
       <!--<input class="form-control" type="text" name="usu_id" id="usu_id">-->
-      <input class="form-control" type="text" name="don_cedula" id="don_cedula" maxlength="100" placeholder="Cedula" required>
+      <input class="form-control" type="text" name="cli_cedula" id="cli_cedula" maxlength="100" placeholder="Cedula" required>
     </div>
    
     <div class="form-group col-lg-6 col-md-6 col-xs-12">
       <label for="">Nombres Y Apellidos(*):</label>
-      <input type="text" class="form-control" name="don_nombre" id="don_nombre" placeholder="Nombre" maxlength="200" required>
+      <input type="text" class="form-control" name="cli_nombre" id="cli_nombre" placeholder="Nombre" maxlength="200" required>
     </div>
      <div class="form-group col-lg-6 col-md-6 col-xs-12">
       <label for="">Teléfono</label>
-      <input class="form-control" type="text" name="don_telefono" id="don_telefono" maxlength="20" placeholder="Número de telefono" required>
+      <input class="form-control" type="text" name="cli_telefono" id="cli_telefono" maxlength="20" placeholder="Número de telefono" required>
     </div>
     <div class="form-group col-lg-6 col-md-6 col-xs-12">
       <label for="">Correo</label>
-      <input class="form-control" type="email" name="don_correo" id="don_correo" maxlength="70" placeholder="Correo" required>
+      <input class="form-control" type="email" name="cli_correo" id="cli_correo" maxlength="70" placeholder="Correo" required>
     </div>
     <div class="form-group col-lg-6 col-md-6 col-xs-12">
       <label for="">Dirección</label>
-      <input class="form-control" type="text" name="don_direccion" id="don_direccion" maxlength="100" placeholder="Direccion" required>
+      <input class="form-control" type="text" name="cli_direccion" id="cli_direccion" maxlength="100" placeholder="Direccion" required>
     </div>
    
 	  <!--
@@ -112,7 +112,7 @@ if ($_SESSION['Actas']==0) {
 require 'footer.php';
  ?>
  <script src="scripts/hmac-sha256.js"></script>
- <script src="scripts/donadores.js"></script>
+ <script src="scripts/clientes.js"></script>
  <?php 
 }
 

@@ -1,3 +1,4 @@
+// JavaScript Document
 var tabla;
 
 //funcion que se ejecuta al inicio
@@ -7,60 +8,36 @@ function init(){
    $("#formulario").on("submit",function(e){
    	guardaryeditar(e);
    })
-
-   
-//mostramos los combos
-  $.post("../ajax/donadores.php?op=combo_categoria", function(r){
-   	$("#categoria").html(r);
-   	$("#categoria").selectpicker('refresh');
-     });
-	
-
-	//
-	$.post("../ajax/donadores.php?op=combo_subcategoria", function(r){
-   	$("#subcategoria").html(r);
-   	$("#subcategoria").selectpicker('refresh');
-     });
-	
-	$.post("../ajax/donadores.php?op=combo_materiales", function(r){
-   	$("#materiales").html(r);
-   	$("#materiales").selectpicker('refresh');
-     });
-	
-	$.post("../ajax/donadores.php?op=combo_estado", function(r){
-   	$("#estado").html(r);
-   	$("#estado").selectpicker('refresh');
-     });
 	
 }
+
+
 
 //funcion limpiar
 function limpiar(){
-	$("#usu_nombre").val("");
-    $("#usu_cedula").val("");
-	$("#usu_telefono").val("");
-	$("#usu_correo").val("");
-	$("#usu_cargo").val("");
-	$("#usu_login").val("");
-	$("#usu_clave").val("");
+	$("#uso_id").val("");
+    $("#uso_cantidad").val("");
+	$("#uso_descripcion").val("");
 	$("#usu_id").val("");
 	$("#claveu").val("");
 }
+
 
 //funcion mostrar formulario
 function mostrarform(flag){
 	limpiar();
 	if(flag){
-		$("#listadoregistros").SHOW();
-		$("#formularioregistros").show();
+		$("#listado").hide();
+		$("#formulariousos").show();
 		$("#btnGuardar").prop("disabled",false);
-		$("#btnagregar").show();
+		$("#btnagregar").hide();
 	}else{
-		$("#listadoregistros").show();
-		$("#formularioregistros").show();
+		$("#listado").show();
+		$("#formulariousos").hide();
 		$("#btnagregar").show();
 	}
 }
+
 
 //cancelar form
 function cancelarform(){
@@ -68,15 +45,14 @@ function cancelarform(){
 	mostrarform(false);
 }
 
-//funcion listar
 function listar(){
-	tabla=$('#tbllistado').dataTable({
+	tabla=$('#tbllistado_stock').dataTable({
 		"aProcessing": true,//activamos el procedimiento del datatable
 		"aServerSide": true,//paginacion y filrado realizados por el server
 		
 		"ajax":
 		{
-			url:'../ajax/donadores.php?op=listar',
+			url:'../ajax/Stockconsumibles.php?op=listar',
 			type: "get",
 			dataType : "json",
 			error:function(e){
@@ -88,6 +64,7 @@ function listar(){
 		"order":[[0,"desc"]]//ordenar (columna, orden)
 	}).DataTable();
 }
+
 //funcion para guardaryeditar
 function guardaryeditar(e){
      e.preventDefault();//no se activara la accion predeterminada 
@@ -95,22 +72,42 @@ function guardaryeditar(e){
      var formData=new FormData($("#formulario")[0]);
 
      $.ajax({
-     	url: "../ajax/donadores.php?op=guardaryeditar",
+     	url: "../ajax/usos.php?op=guardaryeditar",
      	type: "POST",
      	data: formData,
      	contentType: false,
      	processData: false,
 
      	success: function(datos){
-     		if (datos=="Datos registrados correctamente")
-			    bootbox.alert(datos);
-			else
-				bootbox.alert("El donador ya existe");
-//     		mostrarform(false);
+     		bootbox.alert(datos);
+     		mostrarform(false);
      		tabla.ajax.reload();
      	}
      });
 
      limpiar();
 }
-init();
+
+function eliminar(e){
+     e.preventDefault();//no se activara la accion predeterminada 
+     $("#btnEliminar").prop("disabled",true);
+     var formData=new FormData($("../ajax/Stockconsumible.php?op=eliminar")[0]);
+
+     $.ajax({
+     	url: "../ajax/Stockconsumible.php?op=eliminar",
+     	type: "POST",
+     	data: formData,
+     	contentType: false,
+     	processData: false,
+
+     	success: function(datos){
+     		bootbox.alert(datos);
+     		mostrarform(false);
+     		tabla.ajax.reload();
+     	}
+     });
+
+     limpiar();
+}
+
+init();// JavaScript Document
