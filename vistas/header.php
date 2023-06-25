@@ -107,15 +107,16 @@ if ($_SESSION['Actas']==0) {
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="clientes.php"><i class="fa fa-circle-o"></i>Clientes</a></li>  <li><a href="donaciones.php"><i class="fa fa-circle-o"></i>Donaciones</a></li>   
-			<li><a href="usos.php"><i class="fa fa-circle-o"></i> Usos</a></li>
+            <li><a href="clientes.php"><i class="fa fa-circle-o"></i>Clientes</a></li>  <li><a href="eventos.php"><i class="fa fa-circle-o"></i>Eventos</a></li>   
+			<li><a href="organizadores.php"><i class="fa fa-circle-o"></i>Organizadores</a></li>
 
                  
           </ul>
         </li>';
 }
         ?>
-               <?php 
+               <?php
+		  /*
 if ($_SESSION['Activos']==1) {
   echo ' <li class="treeview">
           <a href="#">
@@ -132,6 +133,7 @@ if ($_SESSION['Activos']==1) {
           </ul>
         </li>';
 }
+*/
         ?>
         
                <?php 
@@ -172,6 +174,7 @@ if ($_SESSION['Acceso']==0) {
 }
         ?>  
                                      <?php 
+		  /*
 if ($_SESSION['Reportes']==1) {
   echo '     <li class="treeview">
           <a href="#">
@@ -205,6 +208,7 @@ if ($_SESSION['Custodios']==1) {
           </ul>
         </li>';
 }
+*/
         ?>     
 
         
