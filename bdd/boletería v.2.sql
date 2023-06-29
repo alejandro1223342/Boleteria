@@ -280,6 +280,286 @@ LOCK TABLES `usuario_permiso` WRITE;
 INSERT INTO `usuario_permiso` VALUES (1,1,1),(2,1,2),(3,1,3),(4,1,4),(5,1,5),(6,1,6),(7,1,7),(280,8,1),(281,8,3),(282,8,7),(296,9,1),(297,9,3),(298,9,7),(205,10,1),(206,10,3),(207,10,7),(274,11,1),(275,11,3),(276,11,7),(292,12,1),(293,12,2),(294,12,3),(295,12,7),(134,14,1),(135,14,3),(136,14,7),(85,15,1),(86,15,2),(87,15,3),(88,15,7),(8,17,1),(9,17,2),(10,17,3),(11,17,7),(161,18,1),(162,18,3),(163,18,7),(323,19,1),(324,19,3),(325,19,7),(143,20,1),(144,20,3),(145,20,7),(12,21,1),(13,21,2),(14,21,3),(15,21,7),(368,22,1),(369,22,3),(370,22,7),(208,23,1),(209,23,3),(210,23,7),(314,24,1),(315,24,3),(316,24,7),(16,25,1),(17,25,2),(18,25,3),(19,25,7),(470,26,1),(471,26,3),(472,26,7),(98,27,1),(99,27,3),(100,27,7),(137,29,1),(138,29,3),(139,29,7),(119,30,1),(120,30,3),(121,30,7),(519,31,1),(520,31,3),(521,31,7),(507,32,1),(508,32,3),(509,32,7),(311,33,1),(312,33,3),(313,33,7),(173,35,1),(174,35,3),(175,35,7),(20,36,1),(21,36,2),(22,36,3),(23,36,7),(526,37,1),(527,37,3),(528,37,7),(24,38,1),(25,38,2),(26,38,3),(27,38,7),(347,39,1),(348,39,3),(349,39,7),(128,40,1),(129,40,3),(130,40,7),(188,41,1),(189,41,3),(190,41,7),(283,42,1),(284,42,3),(285,42,7),(392,44,1),(393,44,3),(394,44,7),(125,45,1),(126,45,3),(127,45,7),(377,46,1),(378,46,3),(379,46,7),(167,47,1),(168,47,3),(169,47,7),(146,48,1),(147,48,3),(148,48,7),(522,49,1),(523,49,2),(524,49,3),(525,49,7),(485,50,1),(486,50,3),(487,50,7),(265,51,1),(266,51,3),(267,51,7),(32,52,1),(33,52,3),(34,52,7),(35,55,1),(36,55,2),(37,55,3),(38,55,7),(455,56,1),(456,56,2),(457,56,3),(458,56,7),(185,58,1),(186,58,3),(187,58,7),(305,59,1),(306,59,3),(307,59,7),(289,60,1),(290,60,3),(291,60,7),(411,62,1),(412,62,3),(413,62,7),(140,63,1),(141,63,3),(142,63,7),(81,64,1),(82,64,2),(83,64,3),(84,64,7),(170,65,1),(171,65,3),(172,65,7),(510,66,1),(511,66,3),(512,66,7),(152,67,1),(153,67,3),(154,67,7),(359,68,1),(360,68,3),(361,68,7),(101,69,1),(102,69,3),(103,69,7),(404,70,1),(405,70,2),(406,70,3),(407,70,7),(479,71,1),(480,71,3),(481,71,7),(473,72,1),(474,72,3),(475,72,7),(39,74,1),(40,74,3),(41,74,7),(329,75,1),(330,75,3),(331,75,7),(302,76,1),(303,76,3),(304,76,7),(491,77,1),(492,77,3),(493,77,4),(494,77,7),(476,78,1),(477,78,3),(478,78,7),(386,79,1),(387,79,3),(388,79,7),(320,81,1),(321,81,3),(322,81,7),(241,82,1),(242,82,3),(243,82,7),(195,83,1),(196,83,2),(197,83,3),(198,83,7),(440,84,1),(441,84,3),(442,84,7),(42,86,1),(43,86,2),(44,86,3),(45,86,7),(362,87,1),(363,87,3),(364,87,7),(380,88,1),(381,88,3),(382,88,7),(182,89,1),(183,89,3),(184,89,7),(452,90,1),(453,90,3),(454,90,7),(498,153,1),(499,153,4),(500,153,7),(271,154,1),(272,154,3),(273,154,7),(155,156,1),(156,156,3),(157,156,7),(131,157,1),(132,157,3),(133,157,7),(199,158,1),(200,158,3),(201,158,7),(365,159,1),(366,159,3),(367,159,7),(466,161,1),(467,161,3),(468,161,4),(469,161,7),(516,162,1),(517,162,3),(518,162,7),(504,163,1),(505,163,3),(506,163,7),(374,164,1),(375,164,3),(376,164,7),(459,165,1),(460,165,3),(461,165,4),(462,165,7),(371,167,1),(372,167,3),(373,167,7),(414,168,1),(415,168,3),(416,168,7),(398,175,1),(399,175,3),(400,175,7),(408,177,1),(409,177,3),(410,177,7),(501,178,1),(502,178,3),(503,178,7),(428,181,1),(429,181,3),(430,181,7),(443,183,1),(444,183,3),(445,183,7);
 /*!40000 ALTER TABLE `usuario_permiso` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'boletos_ist17j'
+--
+
+--
+-- Dumping routines for database 'boletos_ist17j'
+--
+/*!50003 DROP PROCEDURE IF EXISTS `boletos_insert` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `boletos_insert`(in evento int, in tipoboleto int, in precio decimal, in cantidad int)
+BEGIN
+declare sig int;
+	   select max(bol_id) into sig from boletos; 
+        set sig=sig+1;
+      INSERT INTO boletos (`bol_id`,`eve_id`,`cat_id_bol`,`bol_precio`,`bol_cantidad`)
+VALUES (sig,evento,tipoboleto,precio,cantidad);
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `boletos_select` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `boletos_select`()
+BEGIN
+select eventos.eve_nombre,catalogo.cat_nombre,bol_precio,bol_cantidad 
+from boletos,eventos,catalogo where boletos.eve_id=eventos.eve_id
+ and boletos.cat_id_bol=catalogo.cat_id;
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `cliente_insert` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `cliente_insert`(in cedula int,in nombre varchar(100),in telefono int,in correo varchar(100) ,in direccion varchar(100))
+BEGIN
+       INSERT INTO clientes (`cli_cedula`,`cli_nombre`,`cli_telefono`,
+		`cli_correo`,`cli_direccion`,`cli_fecha`)
+	   VALUES (cedula,nombre,telefono,correo,direccion,current_date());
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `cliente_select` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `cliente_select`()
+BEGIN
+	SELECT clientes.cli_cedula,
+    clientes.cli_nombre,
+    clientes.cli_telefono,
+    clientes.cli_correo,
+    clientes.cli_direccion,
+    clientes.cli_fecha
+FROM clientes;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `evento_insert` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `evento_insert`(in nombre varchar(100),in nombrelugar varchar(100),in fecha datetime, in direccion varchar(100), in tipoevento int, in organizador int)
+BEGIN
+
+declare sig int;
+	   select max(eve_id) into sig from eventos; 
+        set sig=sig+1;
+       INSERT INTO eventos(`eve_id`,`eve_nombre`,`eve_nombrelugar`,`eve_fecha`,
+       `eve_direccion`,`cat_id_tipoeve`,`org_id`)
+VALUES (sig,nombre,nombrelugar,fecha,direccion,tipoevento,organizador);
+
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `evento_select` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `evento_select`()
+BEGIN
+select eve_id, eve_nombre,eve_nombrelugar,eve_fecha, 
+eve_direccion, cat_nombre, organizadores.org_nombre from eventos,organizadores,catalogo
+where eventos.cat_id_tipoeve= catalogo.cat_id and eventos.org_id=organizadores.org_id;
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `organizador_insert` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `organizador_insert`(in nombre varchar(100),in telefono varchar(10),in correo varchar(100),in direccion varchar(100))
+BEGIN
+
+declare sig int;
+	   select max(org_id) into sig from organizadores; 
+        set sig=sig+1;
+       INSERT INTO organizadores
+			(org_id,org_nombre,org_telefono,org_correo,org_direccion,org_fecha)
+VALUES (sig,nombre,telefono,correo,direccion,current_date());
+
+
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `organizador_select` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `organizador_select`()
+BEGIN
+SELECT `organizadores`.`org_id`,
+    `organizadores`.`org_nombre`,
+    `organizadores`.`org_telefono`,
+    `organizadores`.`org_correo`,
+    `organizadores`.`org_direccion`,
+    `organizadores`.`org_fecha`
+FROM `boletos_ist17j`.`organizadores`;
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_catalogo_select` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_catalogo_select`(in padre int)
+BEGIN
+	SELECT * FROM catalogo where cat_padre=padre;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_eventos_combo` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_eventos_combo`()
+BEGIN
+select * from eventos where eve_id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_logeo` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_logeo`(in usuario varchar(50), in clave varchar(100))
+BEGIN
+SELECT usu_id,usu_nombre,usu_cedula,usu_telefono,usu_correo,usu_cargo,usu_login 
+FROM usuario 
+WHERE usu_login=usuario AND usu_clave=clave AND usu_condicion='1';
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `sp_organizadores_combo` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_organizadores_combo`()
+BEGIN
+select * from organizadores where org_id;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -290,4 +570,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-29 11:56:47
+-- Dump completed on 2023-06-29 12:02:17
