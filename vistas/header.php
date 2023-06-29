@@ -107,7 +107,8 @@ if ($_SESSION['Actas']==0) {
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="clientes.php"><i class="fa fa-circle-o"></i>Clientes</a></li>  <li><a href="eventos.php"><i class="fa fa-circle-o"></i>Eventos</a></li>   
+            <li><a href="clientes.php"><i class="fa fa-circle-o"></i>Clientes</a></li>  <li><a href="eventos.php"><i class="fa fa-circle-o"></i>Eventos</a></li>  
+			<li><a href="boletos.php"><i class="fa fa-circle-o"></i>Boletos</a></li>  
 			<li><a href="organizadores.php"><i class="fa fa-circle-o"></i>Organizadores</a></li>
 
                  
