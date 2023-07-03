@@ -40,7 +40,7 @@ if ($_SESSION['Actas']==0) {
 		</div>
 	  
 	  <div class="form-group col-lg-6 col-md-6 col-xs-12">
-      <label for="">Precio(*)</label>
+      <label for="">Precio$(*)</label>
       <input class="form-control" type="text" name="bol_precio" id="bol_precio" maxlength="100" placeholder="Precio ($)" required>
     </div>
 	  

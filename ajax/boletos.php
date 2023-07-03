@@ -6,6 +6,7 @@ $boletos=new boletos();
 
 $claveu=isset($_POST["claveu"])? limpiarCadena($_POST["claveu"]):"";
 
+$bol_id=isset($_POST["bol_id"])? limpiarCadena($_POST["bol_id"]):"";
 $eve_id=isset($_POST["eve_id"])? limpiarCadena($_POST["eve_id"]):"";
 $cat_id_bol=isset($_POST["cat_id_bol"])? limpiarCadena($_POST["cat_id_bol"]):"";
 $bol_precio=isset($_POST["bol_precio"])? limpiarCadena($_POST["bol_precio"]):"";
@@ -44,8 +45,8 @@ case 'salir':
 
 		while ($reg=$rspta->fetch_object()) {
 			$data[]=array(
-            "0"=>$reg->eve_id,
-            "1"=>$reg->cat_id_bol,
+            "0"=>$reg->eve_nombre,
+            "1"=>$reg->cat_nombre,
             "2"=>$reg->bol_precio,
             "3"=>$reg->bol_cantidad,
             
