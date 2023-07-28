@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="code_generator.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497008809044" remote="133324505520000000" Dst="0" />
+<file name="contactform.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497008965286" remote="133324505520000000" Dst="0" />
+<file name="contents.html" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497008965286" remote="133324505520000000" Dst="0" />
+<file name="contentsutf8.html" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497008965286" remote="133324505530000000" Dst="0" />
+<file name="DKIM.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497008809044" remote="133324505530000000" Dst="0" />
+<file name="exceptions.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497008965286" remote="133324505530000000" Dst="0" />
+<file name="gmail.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497008965286" remote="133324505530000000" Dst="0" />
+<file name="gmail_xoauth.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497008965286" remote="133324505530000000" Dst="0" />
+<file name="index.html" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497008965286" remote="133324505540000000" Dst="0" />
+<file name="mail.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497008965286" remote="133324505540000000" Dst="0" />
+<file name="mailing_list.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497008965286" remote="133324505540000000" Dst="0" />
+<file name="pop_before_smtp.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497008965286" remote="133324505540000000" Dst="0" />
+<file name="sendmail.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497009121527" remote="133324505570000000" Dst="0" />
+<file name="send_file_upload.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497009121527" remote="133324505570000000" Dst="0" />
+<file name="send_multiple_file_upload.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497009121527" remote="133324505570000000" Dst="0" />
+<file name="signed-mail.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497009121527" remote="133324505570000000" Dst="0" />
+<file name="smtp.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497009121527" remote="133324505570000000" Dst="0" />
+<file name="smtp_check.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497009121527" remote="133324505570000000" Dst="0" />
+<file name="smtp_no_auth.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497009121527" remote="133324505570000000" Dst="0" />
+<file name="ssl_options.phps" server="10.10.35.218//var/www/html/cuarto/MUNIOZJA/" local="133324497009277794" remote="133324505580000000" Dst="0" />
+</dwsync>

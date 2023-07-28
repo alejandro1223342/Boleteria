@@ -9,7 +9,7 @@ if (strlen(session_id())<1)
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>BIOTECNOLOGIA</title>
+  <title>BOLETERIA</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -45,7 +45,7 @@ if (strlen(session_id())<1)
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span><font size="4" style="color:#FFF">BIOTECNOLOGIA - INSTITUTO SUPERIOR TECNOLOGICO "17 DE JULIO"</font></span>
+        <span><font size="4" style="color:#FFF">BOLETERIA - VENTA DE BOLETOS</font></span>
         
       </a>
       
@@ -61,7 +61,7 @@ if (strlen(session_id())<1)
               <li class="user-header">
              
                 <p>
-                  IST17J
+                  BOLETERIA
                   <small>Noviembre 2022</small>
                 </p>
               </li>

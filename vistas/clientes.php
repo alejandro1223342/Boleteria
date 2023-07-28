@@ -18,7 +18,7 @@ if ($_SESSION['Actas']==0) {
         <div class="col-md-12">
       <div class="box">
 <div class="box-header with-border">
-  <h1 class="box-title">Donadores</h1>
+  <h1 class="box-title">Clientes</h1>
   <div class="box-tools pull-right">
     
   </div>
